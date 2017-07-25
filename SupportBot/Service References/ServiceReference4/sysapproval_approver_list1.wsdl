@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.service-now.com/sysapproval_approver" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.service-now.com/sysapproval_approver" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.service-now.com/sysapproval_approver">
+      <xsd:element name="getKeys">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_journal_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approver" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="document_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="iteration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="process_step" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source_table" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state_binding" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sysapproval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__use_view" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__encoded_query" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__limit" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__first_row" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__last_row" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKeysResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="count" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="get">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__use_view" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_journal_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approver" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="document_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="iteration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="process_step" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source_table" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state_binding" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sysapproval" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRecords">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_journal_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approver" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="document_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="iteration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="process_step" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source_table" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state_binding" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sysapproval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__use_view" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__encoded_query" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__limit" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__first_row" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__last_row" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__order_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__order_by_desc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__exclude_columns" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRecordsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="getRecordsResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="1" name="approval_column" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="approval_journal_column" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="approval_source" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="approver" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="document_id" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="group" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="iteration" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="process_step" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="source_table" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="state_binding" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sysapproval" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="update">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_journal_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approver" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="document_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="iteration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="process_step" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source_table" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state_binding" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sysapproval" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insert">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_journal_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approver" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="document_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="iteration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="process_step" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source_table" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state_binding" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sysapproval" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insertResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sysapproval" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_journal_column" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approver" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="document_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="iteration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="process_step" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source_table" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state_binding" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sysapproval" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteMultipleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="count" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteRecord">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="sys_id" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteRecordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="count" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="deleteRecordSoapOut">
+    <wsdl:part name="sysapproval_approver" element="tns:deleteRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSoapIn">
+    <wsdl:part name="sysapproval_approver" element="tns:get" />
+  </wsdl:message>
+  <wsdl:message name="getKeysSoapOut">
+    <wsdl:part name="sysapproval_approver" element="tns:getKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateSoapIn">
+    <wsdl:part name="sysapproval_approver" element="tns:update" />
+  </wsdl:message>
+  <wsdl:message name="getKeysSoapIn">
+    <wsdl:part name="sysapproval_approver" element="tns:getKeys" />
+  </wsdl:message>
+  <wsdl:message name="getSoapOut">
+    <wsdl:part name="sysapproval_approver" element="tns:getResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecordsSoapIn">
+    <wsdl:part name="sysapproval_approver" element="tns:getRecords" />
+  </wsdl:message>
+  <wsdl:message name="deleteMultipleSoapOut">
+    <wsdl:part name="sysapproval_approver" element="tns:deleteMultipleResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertSoapOut">
+    <wsdl:part name="sysapproval_approver" element="tns:insertResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteRecordSoapIn">
+    <wsdl:part name="sysapproval_approver" element="tns:deleteRecord" />
+  </wsdl:message>
+  <wsdl:message name="deleteMultipleSoapIn">
+    <wsdl:part name="sysapproval_approver" element="tns:deleteMultiple" />
+  </wsdl:message>
+  <wsdl:message name="insertSoapIn">
+    <wsdl:part name="sysapproval_approver" element="tns:insert" />
+  </wsdl:message>
+  <wsdl:message name="updateSoapOut">
+    <wsdl:part name="sysapproval_approver" element="tns:updateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecordsSoapOut">
+    <wsdl:part name="sysapproval_approver" element="tns:getRecordsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceNowSoap">
+    <wsdl:operation name="insert">
+      <wsdl:input message="tns:insertSoapIn" />
+      <wsdl:output message="tns:insertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <wsdl:input message="tns:updateSoapIn" />
+      <wsdl:output message="tns:updateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteMultiple">
+      <wsdl:input message="tns:deleteMultipleSoapIn" />
+      <wsdl:output message="tns:deleteMultipleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getKeys">
+      <wsdl:input message="tns:getKeysSoapIn" />
+      <wsdl:output message="tns:getKeysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecord">
+      <wsdl:input message="tns:deleteRecordSoapIn" />
+      <wsdl:output message="tns:deleteRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get">
+      <wsdl:input message="tns:getSoapIn" />
+      <wsdl:output message="tns:getSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecords">
+      <wsdl:input message="tns:getRecordsSoapIn" />
+      <wsdl:output message="tns:getRecordsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceNowSoap" type="tns:ServiceNowSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insert">
+      <soap:operation soapAction="http://www.service-now.com/sysapproval_approver/insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <soap:operation soapAction="http://www.service-now.com/sysapproval_approver/update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMultiple">
+      <soap:operation soapAction="http://www.service-now.com/sysapproval_approver/deleteMultiple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKeys">
+      <soap:operation soapAction="http://www.service-now.com/sysapproval_approver/getKeys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecord">
+      <soap:operation soapAction="http://www.service-now.com/sysapproval_approver/deleteRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get">
+      <soap:operation soapAction="http://www.service-now.com/sysapproval_approver/get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecords">
+      <soap:operation soapAction="http://www.service-now.com/sysapproval_approver/getRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceNow_sysapproval_approver">
+    <wsdl:port name="ServiceNowSoap" binding="tns:ServiceNowSoap">
+      <soap:address location="https://dev30426.service-now.com/sysapproval_approver_list.do?SOAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

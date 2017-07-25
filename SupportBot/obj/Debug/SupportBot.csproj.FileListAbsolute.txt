@@ -1,0 +1,39 @@
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Bot Application1.dll.config
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Bot Application1.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Bot Application1.pdb
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Autofac.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Chronic.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.Bot.Builder.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.Bot.Connector.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Newtonsoft.Json.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\System.Net.Http.Formatting.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\System.Web.Http.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\System.Web.Http.WebHost.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Autofac.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.Bot.Builder.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.Bot.Connector.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.Rest.ClientRuntime.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\Newtonsoft.Json.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\System.Net.Http.Formatting.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\System.Web.Http.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\System.Web.Http.WebHost.xml
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\obj\Debug\Bot Application1.dll
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\obj\Debug\Bot Application1.pdb
+C:\Users\ansh.dedha\Desktop\SupportBot\SupportBot\obj\Debug\SupportBot.csprojResolveAssemblyReference.cache

@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.service-now.com/incident" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.service-now.com/incident" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.service-now.com/incident">
+      <xsd:element name="getKeys">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="activity_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="additional_assignee_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_history" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_set" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assigned_to" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assignment_group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_service" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caller_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="category" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caused_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="child_incidents" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_code" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cmdb_ci" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments_and_work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="contact_type" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_display" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_plan" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_task" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="escalation" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="follow_up" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="hold_reason" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="impact" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="incident_state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="knowledge" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="made_sla" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notify" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent_incident" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="priority" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="problem_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reassignment_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reopen_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="rfc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="severity" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="short_description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sla_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="subcategory" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_worked" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_reject" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="urgency" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_input" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="watch_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_end" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__use_view" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__encoded_query" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__limit" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__first_row" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__last_row" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKeysResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="count" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="get">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__use_view" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="activity_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="additional_assignee_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_set" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assigned_to" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assignment_group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_service" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caller_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="category" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caused_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="child_incidents" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_code" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cmdb_ci" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments_and_work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="contact_type" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_display" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_plan" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_task" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="escalation" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="follow_up" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="hold_reason" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="impact" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="incident_state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="knowledge" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="made_sla" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notify" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent_incident" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="priority" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="problem_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reassignment_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reopen_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="rfc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="severity" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="short_description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sla_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="subcategory" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_worked" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_reject" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="urgency" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_input" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="watch_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_end" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_start" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRecords">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="activity_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="additional_assignee_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_history" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_set" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assigned_to" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assignment_group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_service" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caller_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="category" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caused_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="child_incidents" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_code" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cmdb_ci" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments_and_work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="contact_type" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_display" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_plan" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_task" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="escalation" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="follow_up" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="hold_reason" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="impact" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="incident_state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="knowledge" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="made_sla" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notify" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent_incident" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="priority" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="problem_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reassignment_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reopen_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="rfc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="severity" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="short_description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sla_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="subcategory" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_worked" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_reject" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="urgency" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_input" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="watch_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_end" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__use_view" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__encoded_query" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__limit" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__first_row" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__last_row" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__order_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__order_by_desc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__exclude_columns" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRecordsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="getRecordsResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="activity_due" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="additional_assignee_list" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="approval" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="approval_set" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="assigned_to" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="assignment_group" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="business_duration" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="business_service" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="business_stc" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="calendar_duration" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="calendar_stc" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="caller_id" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="category" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="caused_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="child_incidents" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="close_code" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="close_notes" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="closed_at" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="closed_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="cmdb_ci" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="comments_and_work_notes" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="contact_type" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="correlation_display" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="correlation_id" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="delivery_plan" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="delivery_task" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="description" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="escalation" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="follow_up" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="group_list" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="hold_reason" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="impact" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="incident_state" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="knowledge" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="made_sla" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="notify" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="opened_at" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="opened_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="parent" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="parent_incident" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="priority" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="problem_id" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="reassignment_count" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="reopen_count" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="resolved_at" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="resolved_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="rfc" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="severity" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="short_description" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sla_due" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="subcategory" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="time_worked" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="upon_approval" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="upon_reject" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="urgency" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="user_input" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="watch_list" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="work_end" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="work_notes_list" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="work_start" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="update">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="activity_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="additional_assignee_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_history" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_set" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assigned_to" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assignment_group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_service" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caller_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="category" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caused_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="child_incidents" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_code" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cmdb_ci" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments_and_work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="contact_type" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_display" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_plan" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_task" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="escalation" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="follow_up" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="hold_reason" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="impact" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="incident_state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="knowledge" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="made_sla" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notify" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent_incident" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="priority" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="problem_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reassignment_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reopen_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="rfc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="severity" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="short_description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sla_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="subcategory" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_worked" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_reject" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="urgency" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_input" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="watch_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_end" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_start" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insert">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="activity_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="additional_assignee_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_history" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_set" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assigned_to" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assignment_group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_service" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caller_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="category" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caused_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="child_incidents" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_code" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cmdb_ci" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments_and_work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="contact_type" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_display" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_plan" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_task" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="escalation" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="follow_up" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="hold_reason" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="impact" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="incident_state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="knowledge" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="made_sla" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notify" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent_incident" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="priority" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="problem_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reassignment_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reopen_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="rfc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="severity" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="short_description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sla_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="subcategory" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_worked" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_reject" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="urgency" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_input" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="watch_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_end" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_start" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insertResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="activity_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="additional_assignee_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_history" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="approval_set" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assigned_to" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="assignment_group" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_service" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="business_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_duration" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_stc" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caller_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="category" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="caused_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="child_incidents" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_code" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="close_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="closed_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cmdb_ci" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="comments_and_work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="contact_type" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_display" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="correlation_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_plan" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="delivery_task" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="due_date" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="escalation" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="expected_start" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="follow_up" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="group_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="hold_reason" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="impact" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="incident_state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="knowledge" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="made_sla" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notify" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="opened_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="order" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="parent_incident" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="priority" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="problem_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reassignment_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="reopen_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_at" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="resolved_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="rfc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="severity" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="short_description" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sla_due" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="subcategory" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_worked" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_approval" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="upon_reject" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="urgency" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_input" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="watch_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_end" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_notes_list" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="work_start" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteMultipleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="count" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteRecord">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="sys_id" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteRecordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="count" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="updateSoapIn">
+    <wsdl:part name="incident" element="tns:update" />
+  </wsdl:message>
+  <wsdl:message name="deleteRecordSoapOut">
+    <wsdl:part name="incident" element="tns:deleteRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSoapIn">
+    <wsdl:part name="incident" element="tns:get" />
+  </wsdl:message>
+  <wsdl:message name="getKeysSoapOut">
+    <wsdl:part name="incident" element="tns:getKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteMultipleSoapOut">
+    <wsdl:part name="incident" element="tns:deleteMultipleResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKeysSoapIn">
+    <wsdl:part name="incident" element="tns:getKeys" />
+  </wsdl:message>
+  <wsdl:message name="getSoapOut">
+    <wsdl:part name="incident" element="tns:getResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecordsSoapIn">
+    <wsdl:part name="incident" element="tns:getRecords" />
+  </wsdl:message>
+  <wsdl:message name="insertSoapOut">
+    <wsdl:part name="incident" element="tns:insertResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteRecordSoapIn">
+    <wsdl:part name="incident" element="tns:deleteRecord" />
+  </wsdl:message>
+  <wsdl:message name="deleteMultipleSoapIn">
+    <wsdl:part name="incident" element="tns:deleteMultiple" />
+  </wsdl:message>
+  <wsdl:message name="insertSoapIn">
+    <wsdl:part name="incident" element="tns:insert" />
+  </wsdl:message>
+  <wsdl:message name="updateSoapOut">
+    <wsdl:part name="incident" element="tns:updateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecordsSoapOut">
+    <wsdl:part name="incident" element="tns:getRecordsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceNowSoap">
+    <wsdl:operation name="insert">
+      <wsdl:input message="tns:insertSoapIn" />
+      <wsdl:output message="tns:insertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <wsdl:input message="tns:updateSoapIn" />
+      <wsdl:output message="tns:updateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteMultiple">
+      <wsdl:input message="tns:deleteMultipleSoapIn" />
+      <wsdl:output message="tns:deleteMultipleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getKeys">
+      <wsdl:input message="tns:getKeysSoapIn" />
+      <wsdl:output message="tns:getKeysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecord">
+      <wsdl:input message="tns:deleteRecordSoapIn" />
+      <wsdl:output message="tns:deleteRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get">
+      <wsdl:input message="tns:getSoapIn" />
+      <wsdl:output message="tns:getSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecords">
+      <wsdl:input message="tns:getRecordsSoapIn" />
+      <wsdl:output message="tns:getRecordsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceNowSoap" type="tns:ServiceNowSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insert">
+      <soap:operation soapAction="http://www.service-now.com/incident/insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <soap:operation soapAction="http://www.service-now.com/incident/update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMultiple">
+      <soap:operation soapAction="http://www.service-now.com/incident/deleteMultiple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKeys">
+      <soap:operation soapAction="http://www.service-now.com/incident/getKeys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecord">
+      <soap:operation soapAction="http://www.service-now.com/incident/deleteRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get">
+      <soap:operation soapAction="http://www.service-now.com/incident/get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecords">
+      <soap:operation soapAction="http://www.service-now.com/incident/getRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceNow_incident">
+    <wsdl:port name="ServiceNowSoap" binding="tns:ServiceNowSoap">
+      <soap:address location="https://dev30426.service-now.com/incident.do?SOAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

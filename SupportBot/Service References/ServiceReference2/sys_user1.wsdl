@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.service-now.com/sys_user" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.service-now.com/sys_user" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.service-now.com/sys_user">
+      <xsd:element name="getKeys">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="accumulated_roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="building" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_integration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="city" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cost_center" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="country" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="date_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="default_perspective" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="department" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="email" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="employee_number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="failed_attempts" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="first_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="gender" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="home_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="internal_integration_user" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="introduction" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login_time" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ldap_server" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="locked_out" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="manager" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="middle_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="mobile_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notification" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="password_needs_reset" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="photo" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="preferred_language" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="schedule" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="street" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_zone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="title" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_password" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="vip" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="web_service_access_only" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="zip" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__use_view" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__encoded_query" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__limit" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__first_row" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__last_row" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getKeysResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="count" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="get">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__use_view" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="accumulated_roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="building" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_integration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="city" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cost_center" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="country" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="date_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="default_perspective" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="department" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="email" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="employee_number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="failed_attempts" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="first_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="gender" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="home_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="internal_integration_user" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="introduction" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login_time" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ldap_server" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="locked_out" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="manager" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="middle_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="mobile_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notification" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="password_needs_reset" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="photo" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="preferred_language" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="schedule" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="street" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_zone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="title" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_password" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="vip" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="web_service_access_only" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="zip" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRecords">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="accumulated_roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="building" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_integration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="city" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cost_center" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="country" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="date_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="default_perspective" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="department" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="email" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="employee_number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="failed_attempts" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="first_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="gender" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="home_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="internal_integration_user" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="introduction" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login_time" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ldap_server" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="locked_out" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="manager" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="middle_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="mobile_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notification" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="password_needs_reset" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="photo" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="preferred_language" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="schedule" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="street" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_zone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="title" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_password" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="vip" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="web_service_access_only" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="zip" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__use_view" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__encoded_query" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__limit" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__first_row" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__last_row" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__order_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__order_by_desc" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="__exclude_columns" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRecordsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="getRecordsResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="1" name="accumulated_roles" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="building" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="calendar_integration" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="city" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="cost_center" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="country" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="date_format" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="default_perspective" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="department" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="email" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="employee_number" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="failed_attempts" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="first_name" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="gender" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="home_phone" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="internal_integration_user" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="introduction" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="last_login" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="last_login_time" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="last_name" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="ldap_server" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="locked_out" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="manager" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="middle_name" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="mobile_phone" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="notification" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="password_needs_reset" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="phone" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="photo" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="preferred_language" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="roles" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="schedule" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="source" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="street" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="time_format" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="time_zone" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="title" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="user_name" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="user_password" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="vip" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="web_service_access_only" type="xsd:boolean" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="zip" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="update">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="accumulated_roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="building" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_integration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="city" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cost_center" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="country" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="date_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="default_perspective" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="department" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="email" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="employee_number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="failed_attempts" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="first_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="gender" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="home_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="internal_integration_user" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="introduction" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login_time" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ldap_server" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="locked_out" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="manager" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="middle_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="mobile_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notification" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="password_needs_reset" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="photo" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="preferred_language" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="schedule" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="street" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_zone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="title" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_password" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="vip" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="web_service_access_only" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="zip" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insert">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="accumulated_roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="building" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_integration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="city" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cost_center" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="country" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="date_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="default_perspective" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="department" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="email" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="employee_number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="failed_attempts" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="first_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="gender" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="home_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="internal_integration_user" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="introduction" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login_time" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ldap_server" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="locked_out" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="manager" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="middle_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="mobile_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notification" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="password_needs_reset" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="photo" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="preferred_language" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="schedule" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="street" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_zone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="title" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_password" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="vip" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="web_service_access_only" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="zip" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insertResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="accumulated_roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="building" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="calendar_integration" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="city" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="company" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="cost_center" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="country" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="date_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="default_perspective" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="department" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="email" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="employee_number" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="failed_attempts" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="first_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="gender" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="home_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="internal_integration_user" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="introduction" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_login_time" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="last_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ldap_server" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="location" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="locked_out" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="manager" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="middle_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="mobile_phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="notification" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="password_needs_reset" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="phone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="photo" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="preferred_language" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="roles" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="schedule" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="source" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="state" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="street" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_class_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_created_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_domain_path" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_id" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_mod_count" type="xsd:integer" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_by" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="sys_updated_on" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_format" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="time_zone" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="title" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_name" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="user_password" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="vip" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="web_service_access_only" type="xsd:boolean" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="zip" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteMultipleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="count" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteRecord">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="sys_id" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteRecordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="count" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="insertSoapIn">
+    <wsdl:part name="sys_user" element="tns:insert" />
+  </wsdl:message>
+  <wsdl:message name="updateSoapOut">
+    <wsdl:part name="sys_user" element="tns:updateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecordsSoapOut">
+    <wsdl:part name="sys_user" element="tns:getRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertSoapOut">
+    <wsdl:part name="sys_user" element="tns:insertResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteRecordSoapIn">
+    <wsdl:part name="sys_user" element="tns:deleteRecord" />
+  </wsdl:message>
+  <wsdl:message name="deleteMultipleSoapIn">
+    <wsdl:part name="sys_user" element="tns:deleteMultiple" />
+  </wsdl:message>
+  <wsdl:message name="deleteMultipleSoapOut">
+    <wsdl:part name="sys_user" element="tns:deleteMultipleResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKeysSoapIn">
+    <wsdl:part name="sys_user" element="tns:getKeys" />
+  </wsdl:message>
+  <wsdl:message name="getSoapOut">
+    <wsdl:part name="sys_user" element="tns:getResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRecordsSoapIn">
+    <wsdl:part name="sys_user" element="tns:getRecords" />
+  </wsdl:message>
+  <wsdl:message name="updateSoapIn">
+    <wsdl:part name="sys_user" element="tns:update" />
+  </wsdl:message>
+  <wsdl:message name="deleteRecordSoapOut">
+    <wsdl:part name="sys_user" element="tns:deleteRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSoapIn">
+    <wsdl:part name="sys_user" element="tns:get" />
+  </wsdl:message>
+  <wsdl:message name="getKeysSoapOut">
+    <wsdl:part name="sys_user" element="tns:getKeysResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceNowSoap">
+    <wsdl:operation name="insert">
+      <wsdl:input message="tns:insertSoapIn" />
+      <wsdl:output message="tns:insertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <wsdl:input message="tns:updateSoapIn" />
+      <wsdl:output message="tns:updateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteMultiple">
+      <wsdl:input message="tns:deleteMultipleSoapIn" />
+      <wsdl:output message="tns:deleteMultipleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getKeys">
+      <wsdl:input message="tns:getKeysSoapIn" />
+      <wsdl:output message="tns:getKeysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecord">
+      <wsdl:input message="tns:deleteRecordSoapIn" />
+      <wsdl:output message="tns:deleteRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get">
+      <wsdl:input message="tns:getSoapIn" />
+      <wsdl:output message="tns:getSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecords">
+      <wsdl:input message="tns:getRecordsSoapIn" />
+      <wsdl:output message="tns:getRecordsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceNowSoap" type="tns:ServiceNowSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insert">
+      <soap:operation soapAction="http://www.service-now.com/sys_user/insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <soap:operation soapAction="http://www.service-now.com/sys_user/update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMultiple">
+      <soap:operation soapAction="http://www.service-now.com/sys_user/deleteMultiple" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKeys">
+      <soap:operation soapAction="http://www.service-now.com/sys_user/getKeys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecord">
+      <soap:operation soapAction="http://www.service-now.com/sys_user/deleteRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get">
+      <soap:operation soapAction="http://www.service-now.com/sys_user/get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecords">
+      <soap:operation soapAction="http://www.service-now.com/sys_user/getRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceNow_sys_user">
+    <wsdl:port name="ServiceNowSoap" binding="tns:ServiceNowSoap">
+      <soap:address location="https://dev30426.service-now.com/sys_user.do?SOAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
